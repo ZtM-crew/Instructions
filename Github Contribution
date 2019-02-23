@@ -1,0 +1,81 @@
+## Github contributions step-by-step:
+
+	Make sure you logged in to your Github account
+	1. Fork the project from the external repository
+	It will copy the project to your Github. 
+	2. Make sure you are on your own Github page, click the "Clone or Download" button, copy the link. 
+	If you already set SSH, use that option.
+
+	In Windows: use Git Bash terminal
+
+	Create a folder for the project
+	3. Clone the repo to your machine by the terminal
+
+		git clone <link>
+
+	Go into the project folder
+		
+		npm install
+
+	In Windows might throw an error like node cannot be recognized as external or internal command. 
+	It is because not added as Environment variable. Add it or use Node Command Prompt, automatically installed with Node.js
+
+	Start to work on the project
+
+	It is your decision that you make a branch or you push as a master
+	Notes:
+		As directly you work with your own repository and just secondary with the original, technically 
+		not an issue to use master. If you mess up anything you can easily replace with the original repo.
+		However if you want to play safe, use branch.
+			git checkout -b <branchName>
+
+	4. When you are ready with your work, go to your terminal, make sure the working dir is the project folder
+
+		git status
+		git add .
+		git commit -m "short description what you done"
+		git push 
+		
+	If you push at the first time might ask to set the stream. It provides the command, just copy and paste
+
+		git push --set-upstream origin master OR origin <branchName>
+
+	5. Create Pull Request
+
+		If you pushed as master:
+
+			Go to your Github
+			Confirm that the files you just pushed been updated
+			Click on New pull request, next to Branch menu
+			It navigates to the Original repo, click "Create pull request", add a title and comment, "Create Pull Request"
+
+		If you pushed as branch:
+
+			Go to your Github
+			It appears a yellow message, you can click on "Compare & pull request" or select the branch you just used from the
+			branch menu and click on the "New pull request". Both do the same.
+			It navigates to the Original repo, add a title and comment, "Create Pull Request"
+			In a case there is a conflict, you can resolve it or leave it to me
+
+			When your pull request successfully merged, delete the branch
+
+			It can be helpful if you are not sure about your code and want to keep the master as a backup. However you can go 
+			back to any previous steps in the "commits section".
+
+
+	6. Updating your project
+
+		To make sure you work with the latest version, it is very important to pull the Original repo every time you start to 
+		work on a new task.
+
+		Go to the repo on your Github
+		It appears a gray message just below the branch menu "This branch is x commits behind ...."
+		Click on "Pull request" (NOT the New pull request button) or "Compare", they transfer to the same page
+		It says: "There isn't anything to compare ..." Click on the link "switching the base"
+		It will update your repository from the Original repo.
+		Click on Create pull request, click again. If no conflict, Merge and Confirm.
+		Open your command line/terminal, navigate the project folder
+
+			git pull
+
+	This might be not the perfect practices but it seems working fine. Let me know if you are facing any issues.
